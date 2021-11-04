@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.post('/users', async (req, res) => {
   try {
-    const user = User.create({
+    const user = await User.create({
       username: req.body.username,
       email: req.body.email
     })
